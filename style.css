@@ -1,0 +1,177 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+:root {
+    /* Primary */
+    --green-400: hsl(172, 67%, 45%);
+    --green-200: hsla(175, 58%, 76%, 1);
+
+    /* Neutral */
+    --green-900: hsl(183, 100%, 15%);
+    --green-500: hsl(186, 14%, 43%);
+    --grey-400: hsl(184, 14%, 56%);
+    --grey-200: hsl(185, 41%, 84%);
+    --grey-50: hsl(189, 47%, 97%);
+    --white: hsl(0, 100%, 100%);
+}
+
+body {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+
+    background-color: var(--grey-200);
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: var(--green-500);
+    letter-spacing: 0.8rem;
+    font-size: 1.2rem;
+    
+    margin: 24px;
+}
+
+input {
+    width: 100%;
+    font-size: 24px;
+    color: var(--green-900);
+    
+    background-color: transparent;
+    text-align: right;
+    outline: none;
+
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+}
+
+.input-wrapper {
+    background-color: var(--grey-50);
+    padding: 8px 16px 8px 16px;
+    border-radius: 4px;
+    
+    display: flex;
+    align-items: center;
+}
+
+.input-wrapper img {
+    display: block;
+    width: 12px;
+}
+
+input::placeholder {
+    color: var(--green-500);
+}
+
+.input-wrapper:focus-within {
+    border: 2px solid var(--green-400);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+label {
+    color: var(--green-500);
+    margin-bottom: 8px;
+    
+    display: block;
+}
+
+button {
+    color: var(--white);
+    background-color: var(--green-900);
+
+    font-size: 20px;
+    
+    padding: 8px;
+    border-radius: 4px;
+    
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+}
+
+button:hover {
+    background-color: var(--green-200);
+    color: var(--green-900);
+}
+
+h1 span {
+    display: block;
+}
+
+.main-card {
+    background-color: var(--white);
+    border-radius: 24px;
+    padding: 24px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.card-options {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.tip-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.sub-card {
+    background-color: var(--green-900);
+    padding: 32px 24px;
+    border-radius: 16px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.sub-card .sub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub-card .sub h3 {
+    font-size: 1rem;
+    color: var(--white);
+}
+.sub-card .sub h3 span {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--grey-400);
+}
+
+.sub-card .sub p {
+    font-size: 1.8rem;
+    color: var(--green-400);
+}
+
+.sub-card button {
+    background-color: var(--green-400);
+    color: var(--green-900);
+    
+    text-transform: uppercase;
+}
+
+.sub-card button:hover {
+    background-color: var(--green-200);
+}
