@@ -175,3 +175,52 @@ h1 span {
 .sub-card button:hover {
     background-color: var(--green-200);
 }
+
+button.active {
+    background-color: var(--green-200);
+    color: var(--green-900);
+}
+
+.input-wrapper.error {
+    border: 2px solid rgb(255, 108, 34);
+}
+
+.label-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.label-wrapper p {
+    color: rgb(255, 108, 34);
+    display: none;
+}
+
+
+.card-people:has(.input-wrapper.error) .label-wrapper p {
+    display: block;
+}
+
+.sub-card-state {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+@media (min-width: 60rem) {
+    body {
+        justify-content: center;
+    }
+    .main-card {
+        flex-direction: row;
+    }
+
+    .sub-card-state {
+        gap: 2rem;
+    }
+
+    .sub-card {
+        justify-content: space-between;
+        min-width: 50%;
+    }
+}
