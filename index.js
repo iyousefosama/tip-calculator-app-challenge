@@ -22,11 +22,12 @@ const renderTip = (state) => {
     peopleWrapper.classList.remove("error");
   }
 
-  const tipAmount = state.bill + state.tip * 0.01 * state.bill;
-  const tipTotal = tipAmount * state.people;
+  const totalTip = state.bill * (state.tip / 100);
+  const tipPerPerson = totalTip / state.people;
+  const totalPerPerson = (state.bill + totalTip) / state.people;
 
-  tipText.innerText = `$${tipAmount.toFixed(2)}`;
-  totalText.innerText = `$${tipTotal.toFixed(2)}`;
+  tipText.innerText = `$${tipPerPerson.toFixed(2)}`;
+  totalText.innerText = `$${totalPerPerson.toFixed(2)}`;
 };
 
 const resetTip = () => {
